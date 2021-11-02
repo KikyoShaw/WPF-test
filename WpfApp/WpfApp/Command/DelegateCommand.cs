@@ -11,6 +11,11 @@ namespace WpfApp.Command
 {
 	internal class DelegateCommand : ICommand
 	{
+		//委托
+		public Action<object> ExecuteAction { get; set; }
+		public Func<object, bool> CanExecuteFunc { get; set; }
+		//public Predicate<object> CanExecuteFunc { get; set; }
+
 		public event EventHandler CanExecuteChanged;
 
 		public bool CanExecute(object parameter)
@@ -32,9 +37,5 @@ namespace WpfApp.Command
 
 			this.ExecuteAction(parameter);
 		}
-
-		//委托
-		public Action<object> ExecuteAction { get; set; }
-		public Func<object, bool> CanExecuteFunc { get; set; }
 	}
 }
