@@ -26,6 +26,7 @@ namespace WpfApp
 		public MainWindow()
 		{
 			InitializeComponent();
+			//在主界面的后台代码中把DataContext设置为ViewModel的一个实例。
 			this.DataContext = new MainViewModel(); 
 		}
 
