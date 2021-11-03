@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 //INotifyPropertyChanged用来通知前端控件，ModelName改变后修改前端显示
 namespace BindingTest
 {
-	public class MainWindowModel: INotifyPropertyChanged
+	public class MainWindowModel: /*INotifyPropertyChanged*/ ViewModelBase
 	{
 		public MainWindowModel()
 		{
@@ -29,19 +30,20 @@ namespace BindingTest
 			set
 			{
 				modelName = value;
-				OnPropertyChanged("ModelName");
+				//OnPropertyChanged("ModelName");
+				RaisePropertyChanged();
 			}
 		}
 
-		//为属性添加通知
-		private void OnPropertyChanged(string propertyName)
-		{
-			if(PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(propertyName)); 
-			}
-		}
+		////为属性添加通知
+		//private void OnPropertyChanged(string propertyName)
+		//{
+		//	if(PropertyChanged != null)
+		//	{
+		//		PropertyChanged(this, new PropertyChangedEventArgs(propertyName)); 
+		//	}
+		//}
 
-		public event PropertyChangedEventHandler PropertyChanged;
+		//public event PropertyChangedEventHandler PropertyChanged;
 	}
 }
