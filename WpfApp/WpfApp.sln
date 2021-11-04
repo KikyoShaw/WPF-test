@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingTest", "BindingTest\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM.Test", "MVVM.Test\MVVM.Test.csproj", "{B6BEB69A-1743-409D-994D-64A2911B348C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Style.Test", "Style.Test\Style.Test.csproj", "{80806648-1ABC-40E6-A7A5-EA49E53CFDEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B6BEB69A-1743-409D-994D-64A2911B348C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6BEB69A-1743-409D-994D-64A2911B348C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6BEB69A-1743-409D-994D-64A2911B348C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80806648-1ABC-40E6-A7A5-EA49E53CFDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80806648-1ABC-40E6-A7A5-EA49E53CFDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80806648-1ABC-40E6-A7A5-EA49E53CFDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80806648-1ABC-40E6-A7A5-EA49E53CFDEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
