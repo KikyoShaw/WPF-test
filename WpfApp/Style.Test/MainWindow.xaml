@@ -11,28 +11,54 @@
     <Window.Resources>
 
         <!--样式也可以继承-->
-        <Style x:Key="BaseStyle" TargetType="Button">
+        <Style x:Key="BaseStyle" TargetType="TextBox">
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="40"/>
             <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Background" Value="White"/>
+
+            <!--触发器使用：相当于开关，满足某个条件修改样式-->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <!--<Setter Property="Background" Value="LightGreen"/>-->
+                </Trigger>
+
+                <!--多条件触发器-->
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="true"/>
+                        <Condition Property="IsFocused" Value="true"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="FontSize" Value="30"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+                
+                <!--数据触发器-->
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self},Path=Text}" Value="MVVM">
+                    <Setter Property="Background" Value="Pink"/>
+                </DataTrigger>
+
+            </Style.Triggers>
         </Style>
         <!--不写x:Key="style1",style是全局的，下方按钮不需要指明是style-->
-        <Style x:Key="style1" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Style x:Key="style1" TargetType="TextBox" BasedOn="{StaticResource BaseStyle}">
             <Setter Property="FontSize" Value="16"/>
         </Style>
-        <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseStyle}">
             <Setter Property="FontSize" Value="20"/>
         </Style>
     </Window.Resources>
     
     <Grid>
         <StackPanel>
-            <Button Style="{StaticResource style1}" Content="WPF"/>
-            <Button Content="WPF"/>
-            <Button Content="WPF"/>
-            <Button Content="WPF"/>
-            <Button Content="WPF"/>
-            <Button Content="WPF"/>
+            <TextBox Style="{StaticResource style1}" Text="WPF"/>
+            <TextBox Text="WPF"/>
+            <TextBox Text="WPF"/>
+            <TextBox Text="WPF"/>
+            <TextBox Text="WPF"/>
+            <TextBox Text="WPF"/>
         </StackPanel>
     </Grid>
 </Window>
