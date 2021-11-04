@@ -6,6 +6,8 @@ WpfDateTemplate：数据模块学习示例
 
 BindingTest: WPF绑定学习示例
 
+MVVM.Test：MVVM实战演习，实现数据增删改查功能
+
 《深入浅出WPF》系列高清视频教程 | 讲师：刘铁猛
 https://www.bilibili.com/video/BV1ht411e7Fe?p=7
 
