@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM.Test.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,10 @@ namespace BindingTest
 			this.dataText.DataContext = new Text() { Name = "WPF" };
 
 			//为当前窗口构建数据上下文
-			this.DataContext = new MainWindowModel();
+			//这是一种弱绑定
+			//this.DataContext = new MainWindowModel();
+
+			this.DataContext = new MainViewModelFody();
 		}
 
 		public class Text
