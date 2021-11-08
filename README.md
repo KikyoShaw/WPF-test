@@ -4,7 +4,7 @@ WpfApp：WPF学习示例，含简单MVVM模式
 
 WpfDateTemplate：数据模块学习示例
 
-BindingTest: WPF绑定学习示例，新增Fody对MVVM示例使用
+BindingTest: WPF绑定学习示例，新增Fody对MVVM示例使用以及MVVMLight框架使用
 
 Style.Test：WPF样式和触发使用示例
 
