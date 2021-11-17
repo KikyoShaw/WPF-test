@@ -21,6 +21,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <!--DataTemplate数据模板-->
             <!--CellTemplate示例-->
@@ -36,6 +37,7 @@
                                     <Button Content="编辑"/>
                                     <Button Margin="8 0 0 0" Content="删除"/>
                                 </StackPanel>
+
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -61,6 +63,22 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+
+            <Button Grid.Row="3" Margin="30 30 0 0">
+                <Button.Template>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock x:Name="tb" Text="主播直播详情" Cursor="Hand" FontSize="16" Foreground="#FFFF9600" VerticalAlignment="Center"/>
+                            <TextBlock Text="主播直播详情" Cursor="Hand" FontSize="16" Foreground="#FFFF9600" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="tb" Property="Foreground" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
         </Grid>
     </Grid>
